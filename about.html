@@ -12,7 +12,7 @@
 <!-- ══ NAVBAR ══════════════════════════════════ -->
 <nav class="navbar">
   <a href="index.html" class="nav-logo">
-    <div style="width:42px;height:42px;background:linear-gradient(135deg,#e8192c,#00d4ff);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;">JQ</div>
+    <img src="images/logo.jpg" alt="JQuest Network Logo" style="height:42px;width:auto;object-fit:contain;" />
     <div class="nav-logo-text">
       <span class="brand">J<span>Quest</span></span>
       <span class="tagline">Network &amp; Data Solution</span>
@@ -44,10 +44,17 @@
 <section class="section">
   <div class="about-grid">
     <div class="about-img-wrap fade-up">
-      <!-- Replace with your actual photo. Suggested: team photo or office/installation photo -->
-      <div class="about-img-placeholder">
-        <span class="img-icon">🏢</span>
-        <span>Replace with your company photo<br><small>Suggested: team photo or installation crew</small></span>
+      <!-- PHOTO: Replace images/team-photo.jpg with your actual team or office photo -->
+      <img
+        src="images/team-photo.jpg"
+        alt="JQuest Network Team"
+        style="width:100%;border-radius:10px;border:1px solid rgba(0,212,255,0.15);"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      />
+      <!-- Fallback shown if image is missing -->
+      <div class="about-img-placeholder" style="display:none;">
+        <span class="img-icon">📸</span>
+        <span>Add <strong>images/team-photo.jpg</strong><br><small>Team photo or office/installation photo</small></span>
       </div>
     </div>
 
