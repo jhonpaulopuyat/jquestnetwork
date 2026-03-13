@@ -12,8 +12,8 @@
 <!-- ══ NAVBAR ══════════════════════════════════ -->
 <nav class="navbar">
   <a href="index.html" class="nav-logo">
-    <!-- Replace src with your actual logo image -->
-    <div style="width:42px;height:42px;background:linear-gradient(135deg,#e8192c,#00d4ff);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;">JQ</div>
+    
+    <img src="images/logo.jpg" alt="JQuest Network Logo" style="height:42px;width:auto;object-fit:contain;" />
     <div class="nav-logo-text">
       <span class="brand">J<span>Quest</span></span>
       <span class="tagline">Network &amp; Data Solution</span>
@@ -32,8 +32,9 @@
 </nav>
 
 <!-- ══ HERO ════════════════════════════════════ -->
-<section class="hero">
-  <div class="hero-bg"></div>
+<!-- PHOTO TIP: To add a background photo, upload images/hero-bg.jpg (fiber cables or tech photo works great) -->
+<section class="hero" id="hero-section">
+  <div class="hero-bg" id="hero-bg"></div>
   <div class="hero-grid"></div>
 
   <div class="hero-content">
@@ -298,5 +299,19 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+  // Auto-apply hero background image if hero-bg.jpg exists
+  const heroBg = document.getElementById('hero-bg');
+  if (heroBg) {
+    const img = new Image();
+    img.onload = () => {
+      heroBg.style.backgroundImage = `url('images/hero-bg.jpg')`;
+      heroBg.style.backgroundSize = 'cover';
+      heroBg.style.backgroundPosition = 'center';
+      heroBg.style.opacity = '0.18';
+    };
+    img.src = 'images/hero-bg.jpg';
+  }
+</script>
 </body>
 </html>
